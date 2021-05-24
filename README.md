@@ -13,8 +13,8 @@ Launch apps on Termux
 
 ### Uninstall
 
-    rm ~/..usr/bin/launch
-    sed 's/source /sdcard/Termux/launch-completion.bash//' > ~/.bashrc
+    rm $(which launch)
+    sed -i s/.*launch-completion.bash// ~/.bashrc
 
 ### How to use
 
