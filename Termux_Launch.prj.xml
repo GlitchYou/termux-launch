@@ -1,0 +1,917 @@
+<TaskerData sr="" dvi="1" tv="5.12.21">
+	<Profile sr="prof116" ve="2">
+		<cdate>1620808496287</cdate>
+		<clp>true</clp>
+		<edate>1621808819387</edate>
+		<flags>8</flags>
+		<id>116</id>
+		<mid0>120</mid0>
+		<nme>TL - Running</nme>
+		<State sr="con0" ve="2">
+			<code>143</code>
+			<Str sr="arg0" ve="3">TL - App Installed/TL - App Uninstalled/TL - Update Apps</Str>
+		</State>
+	</Profile>
+	<Profile sr="prof32" ve="2">
+		<cdate>1620805282819</cdate>
+		<clp>true</clp>
+		<edate>1621819994929</edate>
+		<flags>8</flags>
+		<id>32</id>
+		<mid0>33</mid0>
+		<nme>TL - App Installed</nme>
+		<Event sr="con0" ve="2">
+			<code>450</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof34" ve="2">
+		<cdate>1620805282819</cdate>
+		<clp>true</clp>
+		<edate>1621819987134</edate>
+		<flags>8</flags>
+		<id>34</id>
+		<mid0>71</mid0>
+		<nme>TL - App Uninstalled</nme>
+		<Event sr="con0" ve="2">
+			<code>450</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof342" ve="2">
+		<cdate>1621801377748</cdate>
+		<clp>true</clp>
+		<edate>1621809105322</edate>
+		<flags>8</flags>
+		<id>342</id>
+		<mid0>347</mid0>
+		<nme>TL - .Launch App</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">Launch</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof367" ve="2">
+		<cdate>1621801377748</cdate>
+		<clp>true</clp>
+		<edate>1621808336050</edate>
+		<flags>8</flags>
+		<id>367</id>
+		<mid0>368</mid0>
+		<nme>TL - .Info App</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">Info</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Profile sr="prof370" ve="2">
+		<cdate>1621801377748</cdate>
+		<clp>true</clp>
+		<edate>1621808472902</edate>
+		<flags>8</flags>
+		<id>370</id>
+		<mid0>369</mid0>
+		<nme>TL - .Update App</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">Update</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
+	<Project sr="proj0" ve="2">
+		<cdate>1620767398746</cdate>
+		<name>Termux:Launch</name>
+		<pids>32,370,342,367,116,34</pids>
+		<psort>ActiveAlpha</psort>
+		<tids>368,369,371,71,33,83,347,120</tids>
+		<tsort>Alpha</tsort>
+		<Kid sr="Kid">
+			<launchID>83</launchID>
+			<pkg>com.termux.launch</pkg>
+			<vTarg>21</vTarg>
+			<vnme>1.0</vnme>
+			<vnum>2</vnum>
+		</Kid>
+		<Img sr="icon" ve="2">
+			<fle>/storage/emulated/0/Tasker/.icn/icons/Termux.jpg</fle>
+		</Img>
+		<ProfileVariable sr="pv0">
+			<clearout>false</clearout>
+			<exportval></exportval>
+			<immutable>false</immutable>
+			<pvci>false</pvci>
+			<pvd></pvd>
+			<pvdn>Applications</pvdn>
+			<pvid>40</pvid>
+			<pvit>pj</pvit>
+			<pvn>%apps</pvn>
+			<pvt>t</pvt>
+			<strout>true</strout>
+		</ProfileVariable>
+	</Project>
+	<Task sr="task120">
+		<cdate>1620808544181</cdate>
+		<edate>1621839811690</edate>
+		<id>120</id>
+		<nme>TL - File Update</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>35</code>
+			<Int sr="arg0">
+				<var>500</var>
+			</Int>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<ConditionList sr="if">
+				<bool0>And</bool0>
+				<bool1>And</bool1>
+				<Condition sr="c0" ve="3">
+					<lhs>%TRUN</lhs>
+					<op>5</op>
+					<rhs>TL - Update Apps</rhs>
+				</Condition>
+				<Condition sr="c1" ve="3">
+					<lhs>%TRUN</lhs>
+					<op>5</op>
+					<rhs>TL - App Installed</rhs>
+				</Condition>
+				<Condition sr="c2" ve="3">
+					<lhs>%TRUN</lhs>
+					<op>5</op>
+					<rhs>TL - App Uninstalled</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>354</code>
+			<Str sr="arg0" ve="3">%names</Str>
+			<Str sr="arg1" ve="3">%apps.app()</Str>
+			<Str sr="arg2" ve="3">,</Str>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>369</code>
+			<Str sr="arg0" ve="3">%names</Str>
+			<Int sr="arg1" val="5"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%names</Str>
+			<Str sr="arg1" ve="3">%names()</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>598</code>
+			<Str sr="arg0" ve="3">%names</Str>
+			<Str sr="arg1" ve="3">,</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"> </Str>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>410</code>
+			<Str sr="arg0" ve="3">Termux/launch-completion.bash</Str>
+			<Str sr="arg1" ve="3">complete -W "%names" launch</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task33">
+		<cdate>1620805312365</cdate>
+		<edate>1621823017542</edate>
+		<id>33</id>
+		<nme>TL - App Installed</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TL - Get Package</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1"/>
+			<Str sr="arg2" ve="3">%evtprm(2)</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">%pkg</Str>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">%evtprm(1)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%apps</Str>
+			<Str sr="arg1" ve="3">&lt;app pkg="%pkg"&gt;%name&lt;/app&gt;
+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="1"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task347">
+		<cdate>1621801409409</cdate>
+		<edate>1621824539748</edate>
+		<id>347</id>
+		<nme>TL - Launch App</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">%apps.app(#?~R%name)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%app</Str>
+			<Str sr="arg1" ve="3">%apps[app=:=pkg](%num)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>598</code>
+			<Str sr="arg0" ve="3">%app</Str>
+			<Str sr="arg1" ve="3">/.+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>20</code>
+			<App sr="arg0">
+				<appClass></appClass>
+				<appPkg>%app</appPkg>
+				<label>%app</label>
+			</App>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
+	<Task sr="task368">
+		<cdate>1621807968139</cdate>
+		<edate>1621824867827</edate>
+		<id>368</id>
+		<nme>TL - Info App</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">%apps.app(#?~R%name)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">%apps[app=:=pkg](%num)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>598</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">/.+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>216</code>
+			<Str sr="arg0" ve="3">com.whatsapp</Str>
+		</Action>
+	</Task>
+	<Task sr="task369">
+		<cdate>1621808284974</cdate>
+		<edate>1621839788059</edate>
+		<id>369</id>
+		<nme>TL - Update Apps</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>549</code>
+			<Str sr="arg0" ve="3">%apps</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">pm</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getPackageManager
+{PackageManager} ()</Str>
+			<Str sr="arg3" ve="3">PackageManager</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act10" ve="7">
+			<code>598</code>
+			<label>REPLACE: pkg/cls</label>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">.+ (\S+/\S+) .+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">$1</Str>
+		</Action>
+		<Action sr="act11" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">app</Str>
+			<Str sr="arg2" ve="3">loadLabel
+{CharSequence} (PackageManager)</Str>
+			<Str sr="arg3" ve="3">pm</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act12" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Loading Apps</Str>
+			<Str sr="arg1" ve="3">%num/%size - %name</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3"/>
+			<Img sr="arg2" ve="2">
+				<nme>mw_action_autorenew</nme>
+				<tint>-16777216</tint>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="5"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%TIMES</lhs>
+					<op>4</op>
+					<rhs>[24680]$</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act13" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Loading Apps</Str>
+			<Str sr="arg1" ve="3">%num/%size - %name</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3"/>
+			<Img sr="arg2" ve="2">
+				<nme>mw_action_cached</nme>
+				<tint>-16777216</tint>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="5"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%TIMES</lhs>
+					<op>4</op>
+					<rhs>[13579]$</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+		<Action sr="act14" ve="7">
+			<code>598</code>
+			<label>REPLACE:</label>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">[^\w]</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">_</Str>
+		</Action>
+		<Action sr="act15" ve="7">
+			<code>598</code>
+			<label>REPLACE:</label>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">^_+|_+$</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+		</Action>
+		<Action sr="act16" ve="7">
+			<code>598</code>
+			<label>REPLACE: _</label>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">_+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">_</Str>
+		</Action>
+		<Action sr="act17" ve="7">
+			<code>596</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Int sr="arg1" val="28"/>
+			<Str sr="arg2" ve="3"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act18" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%apps</Str>
+			<Str sr="arg1" ve="3">&lt;app pkg="%pkg"&gt;%name&lt;/app&gt;
+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="1"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act19" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">i</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">"android.intent.action.MAIN"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act20" ve="7">
+			<code>523</code>
+			<Str sr="arg0" ve="3">Loading Apps</Str>
+			<Str sr="arg1" ve="3">%size/%size - %name</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3"/>
+			<Img sr="arg2" ve="2">
+				<nme>mw_action_done</nme>
+				<tint>-16777216</tint>
+			</Img>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="5"/>
+			<Int sr="arg6" val="0"/>
+			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">i</Str>
+			<Str sr="arg2" ve="3">addCategory
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">i.CATEGORY_LAUNCHER</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">apps</Str>
+			<Str sr="arg1" ve="3">pm</Str>
+			<Str sr="arg2" ve="3">queryIntentActivities
+{List} (Intent, int)</Str>
+			<Str sr="arg3" ve="3">i</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%size</Str>
+			<Str sr="arg1" ve="3">apps</Str>
+			<Str sr="arg2" ve="3">size
+{int} ()</Str>
+			<Str sr="arg3" ve="3">2</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>890</code>
+			<Str sr="arg0" ve="3">%size</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>39</code>
+			<Str sr="arg0" ve="3">%num</Str>
+			<Str sr="arg1" ve="3">0:%size</Str>
+			<Int sr="arg2" val="0"/>
+		</Action>
+		<Action sr="act8" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">app</Str>
+			<Str sr="arg1" ve="3">apps</Str>
+			<Str sr="arg2" ve="3">get
+{ResolveInfo} (int)</Str>
+			<Str sr="arg3" ve="3">%num</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act9" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">apps</Str>
+			<Str sr="arg2" ve="3">get
+{ResolveInfo} (int)</Str>
+			<Str sr="arg3" ve="3">%num</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+	</Task>
+	<Task sr="task371">
+		<cdate>1621816430600</cdate>
+		<edate>1621816467544</edate>
+		<id>371</id>
+		<nme>TL - Get Package</nme>
+		<Action sr="act0" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">pm</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getPackageManager
+{PackageManager} ()</Str>
+			<Str sr="arg3" ve="3">PackageManager</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">i</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">"android.intent.action.MAIN"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">i</Str>
+			<Str sr="arg2" ve="3">addCategory
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">i.CATEGORY_LAUNCHER</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3"/>
+			<Str sr="arg1" ve="3">i</Str>
+			<Str sr="arg2" ve="3">setPackage
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">"%par1"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">apps</Str>
+			<Str sr="arg1" ve="3">pm</Str>
+			<Str sr="arg2" ve="3">queryIntentActivities
+{List} (Intent, int)</Str>
+			<Str sr="arg3" ve="3">i</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act5" ve="7">
+			<code>664</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">apps</Str>
+			<Str sr="arg2" ve="3">get
+{Object} (int)</Str>
+			<Str sr="arg3" ve="3">0</Str>
+			<Str sr="arg4" ve="3">0</Str>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act6" ve="7">
+			<code>598</code>
+			<label>REPLACE: pkg/cls</label>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">.+ (\S+/\S+) .+</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3">$1</Str>
+		</Action>
+		<Action sr="act7" ve="7">
+			<code>126</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Int sr="arg1" val="1"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Str sr="arg4" ve="3"/>
+		</Action>
+	</Task>
+	<Task sr="task71">
+		<cdate>1620805718230</cdate>
+		<edate>1621820072479</edate>
+		<id>71</id>
+		<nme>TL - App Uninstalled</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TL - Get Package</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="1"/>
+			<Str sr="arg2" ve="3">%evtprm(2)</Str>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3">%pkg</Str>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%name</Str>
+			<Str sr="arg1" ve="3">%evtprm(1)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="1"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>598</code>
+			<Str sr="arg0" ve="3">%apps</Str>
+			<Str sr="arg1" ve="3">&lt;app pkg="%pkg"&gt;%name&lt;/app&gt;</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+		</Action>
+	</Task>
+	<Task sr="task83">
+		<cdate>1620806670292</cdate>
+		<edate>1621838484367</edate>
+		<id>83</id>
+		<nme>TL - .Main</nme>
+		<pri>100</pri>
+		<Action sr="act0" ve="7">
+			<code>377</code>
+			<Bundle sr="arg0">
+				<Vals sr="val">
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
+Button
+The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
+					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
+				</Vals>
+			</Bundle>
+			<Str sr="arg1" ve="3">Termux Launch</Str>
+			<Str sr="arg2" ve="3">Click 'OK' to load your installed apps
+
+This application will automatically update your apps when they are installed/uninstalled, but if you have any problems click on 'OK'
+
+To install the launch run 'bash /sdcard/Termux/install.sh'</Str>
+			<Str sr="arg3" ve="3">OK</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3">Cancel</Str>
+			<Int sr="arg6">
+				<var>999</var>
+			</Int>
+			<Int sr="arg7" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>410</code>
+			<Str sr="arg0" ve="3">Termux/install.sh</Str>
+			<Str sr="arg1" ve="3">this='/sdcard/Termux'
+bin=~/../usr/bin
+complete="source $this/launch-completion.bash"
+
+if [ -e $bin/launch ]; then
+  echo Already been installed
+  exit
+fi
+
+install_source() {
+  if ! grep -qs "$complete" "$1"; then
+    echo -e "\n\n$complete" &gt;&gt; "$1"
+  fi
+}
+
+cp $this/launch ~/
+chmod +x ~/launch
+install ~/launch $bin/
+rm ~/launch
+
+if [ -e ~/.zshrc ]; then
+  install_source ~/.zshrc
+else
+  install_source ~/.bashrc
+fi
+
+echo launch installed</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>410</code>
+			<Str sr="arg0" ve="3">Termux/launch</Str>
+			<Str sr="arg1" ve="3">#!/data/data/com.termux/files/usr/bin/bash
+lc="/sdcard/Termux/launch-completion.bash"
+
+start_app() {
+  am start --user 0 -a $1 -e name $2
+}
+
+run_action() {
+  if grep -qs $3 $lc;
+  then
+    echo "$1"
+    am broadcast -a $2 -e name $3
+  else
+    usage
+  fi
+}
+
+usage() {
+  echo "
+Usage:
+  launch [ options... ] app_name
+
+  Launch apps on android
+
+  -i --info   show app settings
+  -h --help   show help
+  "
+  exit
+}
+
+info() {
+  run_action "Starting info $1..." Info $1
+}
+
+launch() (
+  run_action "Starting $1..." Launch $1
+)
+
+if (( $# == 0 ));
+then
+  usage
+fi
+
+case $1 in
+  -i|--info)
+    info $2
+    ;;
+  -h|--help)
+    usage
+    ;;
+  *)
+    launch $1
+    shift
+    ;;
+esac</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<Action sr="act3" ve="7">
+			<code>130</code>
+			<Str sr="arg0" ve="3">TL - Update Apps</Str>
+			<Int sr="arg1">
+				<var>%priority</var>
+			</Int>
+			<Int sr="arg10" val="0"/>
+			<Str sr="arg2" ve="3"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Int sr="arg5" val="0"/>
+			<Int sr="arg6" val="0"/>
+			<Str sr="arg7" ve="3"/>
+			<Int sr="arg8" val="0"/>
+			<Int sr="arg9" val="0"/>
+			<ConditionList sr="if">
+				<Condition sr="c0" ve="3">
+					<lhs>%td_button</lhs>
+					<op>2</op>
+					<rhs>OK</rhs>
+				</Condition>
+			</ConditionList>
+		</Action>
+	</Task>
+</TaskerData>
