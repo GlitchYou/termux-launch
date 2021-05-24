@@ -99,9 +99,9 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>32,370,342,367,116,34</pids>
+		<pids>367,32,342,34,370,116</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>368,369,371,71,33,83,347,120</tids>
+		<tids>33,83,71,369,368,120,371,347</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
