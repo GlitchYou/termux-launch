@@ -25,12 +25,10 @@ Launch apps on Termux
       
            -i --info   show app settings
            -h --help   show help
-
-
+ 
     $ launch playstore
     Starting playstore...
     ...
-
 
     $ launch -i tasker
     Starting info tasker...
