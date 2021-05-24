@@ -18,6 +18,7 @@ Launch apps on Termux
 
 ### How to use
 
+    $ launch --help
     Usage:
       launch [ options... ] app_name
       Launch apps on android
@@ -25,11 +26,13 @@ Launch apps on Termux
            -i --info   show app settings
            -h --help   show help
 
-    launch playstore
+
+    $ launch playstore
     Starting playstore...
     ...
 
-    launch -i tasker
+
+    $ launch -i tasker
     Starting info tasker...
     ...
 
