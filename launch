@@ -2,21 +2,20 @@
 lc="/sdcard/Termux/launch-completion.bash"
 
 start_app() {
-  am start --user 0 -a $1 -e name $2
+  am start --user 0 -a "$1" -e name "$2"
 }
 
 run_action() {
-  if grep -qs $3 $lc;
-  then
+  if grep -qs "$3" "$lc"; then
     echo "$1"
-    am broadcast -a $2 -e name $3
+    am broadcast -a "$2" -e name "$3"
   else
     usage
   fi
 }
 
 usage() {
-  echo "
+cat <<EOU
 Usage:
   launch [ options... ] app_name
 
@@ -24,32 +23,24 @@ Usage:
 
   -i --info   show app settings
   -h --help   show help
-  "
+EOU
   exit
 }
 
 info() {
-  run_action "Starting info $1..." Info $1
+  run_action "Starting info $1..." Info "$1"
 }
 
 launch() (
-  run_action "Starting $1..." Launch $1
+  run_action "Starting $1..." Launch "$1"
 )
 
-if (( $# == 0 ));
-then
+if ! (( $# )); then # If no arguments
   usage
 fi
 
-case $1 in
-  -i|--info)
-    info $2
-    ;;
-  -h|--help)
-    usage
-    ;;
-  *)
-    launch $1
-    shift
-    ;;
+case "$1" in
+  -i|--info) info "$2";;
+  -h|--help) usage;;
+  *) launch "$1"; shift;;
 esac
