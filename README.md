@@ -13,8 +13,10 @@ Launch apps on Termux
 
 ### Uninstall
 
-    rm $(which launch)
-    sed -i s/.*launch-completion.bash// ~/.bashrc
+```bash
+rm -f $(which launch)
+sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your shell's config file
+```
 
 ### How to use
 
@@ -39,6 +41,3 @@ Launch apps on Termux
 > I did this project with the help of [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)
 
 To add new functions or see how this project works import it by clicking [here](https://taskernet.com/shares/?user=AS35m8lZFkvcWqyrgtPNlB2Mh52ouETCHLjBo4o18oCQ0xa81fNP%2Fw5ZsXNm7UpARlC3g9C%2BsFR3pw%3D%3D&id=Project%3ATermux%3ALaunch)
-
-
-   
