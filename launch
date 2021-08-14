@@ -3,9 +3,9 @@
 
 ### Helpers
 
-me="$0"
 project="/sdcard/Termux"
-apps="$(cat $project/apps)"
+apps="$project/apps"
+me="$0"
 
 start_app() {
   am start --user 0 -a "$1" -e name "$2"
@@ -38,14 +38,16 @@ update() {
 
 usage() {
 cat <<EOU
-Usage:
-  launch [ options... ] app_name
-    Launch apps on android
 
-  -a --app      -- open app
-  -i --info     -- open app settings
-  -u --update   -- load all apps
-  -h --help     -- show help
+ Usage:
+   launch [ -a --app <app_name> ] [ -i --info <app_name> ] [ -u -update ] [ -h --help ]
+     Launch apps on android
+
+   -a --app      -- open app
+   -i --info     -- open app settings
+   -u --update   -- load all apps
+   -h --help     -- show help
+
 EOU
   exit
 }

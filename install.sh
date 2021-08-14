@@ -37,3 +37,4 @@ case "$(basename $SHELL)" in # Get shell
 esac
 
 echo "launch installed on '$(which launch)'"
+

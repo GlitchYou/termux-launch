@@ -1,4 +1,4 @@
-# Termux-Launcher
+# Termux-Launch
 Launch apps on Termux
 
 ![demo](https://j.gifs.com/mqZP5E.gif?download=true)
@@ -22,7 +22,7 @@ sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your sh
 
     $ launch --help
     Usage:
-      launch [ options... ] app_name
+      launch [ -a --app <app_name> ] [ -i --info <app_name> ] [ -u -update ] [ -h --help ]
         Launch apps on android
       
       -a --app       -- open app

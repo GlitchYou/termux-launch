@@ -69,9 +69,9 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>342,34,370,367</pids>
+		<pids>367,342,370,34</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>368,83,33,32,369,120,371,347</tids>
+		<tids>368,347,33,369,371,32,83,120</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
@@ -243,7 +243,7 @@
 	</Task>
 	<Task sr="task368">
 		<cdate>1621807968139</cdate>
-		<edate>1628873785298</edate>
+		<edate>1628920946043</edate>
 		<id>368</id>
 		<nme>TL - Info App</nme>
 		<pri>6</pri>
@@ -280,7 +280,7 @@
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>216</code>
-			<Str sr="arg0" ve="3">com.whatsapp</Str>
+			<Str sr="arg0" ve="3">%pkg</Str>
 		</Action>
 	</Task>
 	<Task sr="task369">
@@ -288,7 +288,7 @@
 		<edate>1628873773963</edate>
 		<id>369</id>
 		<nme>TL - Update Apps</nme>
-		<pri>100</pri>
+		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>549</code>
 			<Str sr="arg0" ve="3">%apps</Str>
