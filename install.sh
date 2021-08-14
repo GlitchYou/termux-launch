@@ -1,21 +1,19 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-location='/sdcard/Android/data/com.termux.launch/'
+me="launch"
+project="/sdcard/Termux"
+comp_name="$me-completion"
 
 # /data/data/com.termux/files/usr/bin
 bin="$PREFIX/bin"
 
-bash_completion() {
-	complete="source $location/launch-completion.bash"
-	echo -e "\n\n$complete" >> ~/.bashrc
+# /sdcard/Termux/bash/launch-completion.bash
+comp() {
+  echo "$(realpath $project/$1/$comp_name.$1)"
 }
 
-zsh_completion() {
-
-}
-
-fish_completion() {
-
+comp_install() {
+  echo "\n\nsource $1" >> "$2"
 }
 
 if command -v launch &>/dev/null; then # Check if launch command exists
@@ -24,17 +22,18 @@ if command -v launch &>/dev/null; then # Check if launch command exists
 fi
 
 install_source() {
-  if ! grep -qs "$complete" "$1"; then
-    echo -e "\n\n$complete" >> "$1"
+  completion="$(comp $1)"
+  if ! grep -qs "$completion" "$2"; then
+    comp_install "$completion" "$2"
   fi
 }
 
-install "$location"/launch "$bin" # install already can chmod
+install "$project/$me" "$bin" # install already can chmod
 
 case "$(basename $SHELL)" in # Get shell
-  'zsh') install_source ~/.zshrc;;
-  'bash') install_source ~/.bashrc;;
-  'fish') install_source ~/.config/fish/config.fish;;
+  zsh) install_source zsh ~/.zshrc;;
+  bash) install_source bash ~/.bashrc;;
+  fish) install_source fish ~/.config/fish/completions/$comp_name.fish;;
 esac
 
 echo "launch installed on '$(which launch)'"
