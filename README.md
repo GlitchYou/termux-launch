@@ -1,15 +1,21 @@
-# Termux-Launch
+# Termux:Launch
 Launch apps on Termux
 
-![demo](https://j.gifs.com/mqZP5E.gif?download=true)
+<details markdown='1'>
+    <summary>Demo</summary>
+    <img src="demo.gif" alt="demo">
+</details>
+
 
 ### Install
 
-- Install Termux Launch on [realease](https://github.com/GlitchYou/termux-launch/releases/tag/1.0)
-- Open the app and it will show a dialog
-- Click ok to proceed with the installation
-- When finished, open Termux and perform this action `bash /sdcard/Termux/install.sh`
-- Close and open Termux again
+##### Dependences
+    pkg install git
+
+1. Install Termux Launch on [realease](https://github.com/GlitchYou/termux-launch/releases/tag/1.2)
+2. Open the app and it will show a notification
+3. Click install to proceed with the installation
+
 
 ### Uninstall
 
@@ -17,6 +23,7 @@ Launch apps on Termux
 rm -f $(which launch)
 sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your shell's config file
 ```
+
 
 ### How to use
 
@@ -41,6 +48,7 @@ sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your sh
     $ launch -u
     Loading Apps...
     ...
+
 
 ##### Import this project
 
