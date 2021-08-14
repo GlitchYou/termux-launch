@@ -1,51 +1,21 @@
-<TaskerData sr="" dvi="1" tv="5.12.22">
-	<Profile sr="prof116" ve="2">
-		<cdate>1620808496287</cdate>
+<TaskerData sr="" dvi="1" tv="5.13.6">
+	<Profile sr="prof34" ve="2">
+		<cdate>1628873919812</cdate>
 		<clp>true</clp>
-		<edate>1622047538375</edate>
+		<edate>1628873940496</edate>
 		<flags>8</flags>
-		<id>116</id>
+		<id>34</id>
 		<mid0>120</mid0>
 		<nme>TL - Running</nme>
 		<State sr="con0" ve="2">
 			<code>143</code>
-			<Str sr="arg0" ve="3">TL - App Installed/TL - App Uninstalled/TL - Update Apps</Str>
+			<Str sr="arg0" ve="3">TL - Update Apps</Str>
 		</State>
-	</Profile>
-	<Profile sr="prof32" ve="2">
-		<cdate>1620805282819</cdate>
-		<clp>true</clp>
-		<edate>1622047539375</edate>
-		<flags>8</flags>
-		<id>32</id>
-		<mid0>33</mid0>
-		<nme>TL - App Installed</nme>
-		<Event sr="con0" ve="2">
-			<code>450</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3"/>
-			<Str sr="arg1" ve="3"/>
-		</Event>
-	</Profile>
-	<Profile sr="prof34" ve="2">
-		<cdate>1620805282819</cdate>
-		<clp>true</clp>
-		<edate>1622047538865</edate>
-		<flags>8</flags>
-		<id>34</id>
-		<mid0>71</mid0>
-		<nme>TL - App Uninstalled</nme>
-		<Event sr="con0" ve="2">
-			<code>450</code>
-			<pri>0</pri>
-			<Str sr="arg0" ve="3"/>
-			<Str sr="arg1" ve="3"/>
-		</Event>
 	</Profile>
 	<Profile sr="prof342" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1622047541440</edate>
+		<edate>1628857080551</edate>
 		<flags>8</flags>
 		<id>342</id>
 		<mid0>347</mid0>
@@ -63,7 +33,7 @@
 	<Profile sr="prof367" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1622047540867</edate>
+		<edate>1628857079832</edate>
 		<flags>8</flags>
 		<id>367</id>
 		<mid0>368</mid0>
@@ -81,7 +51,7 @@
 	<Profile sr="prof370" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1622047539870</edate>
+		<edate>1628867424866</edate>
 		<flags>8</flags>
 		<id>370</id>
 		<mid0>369</mid0>
@@ -99,9 +69,9 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>370,32,116,34,342,367</pids>
+		<pids>342,34,370,367</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>371,368,369,83,71,33,120,347</tids>
+		<tids>368,83,33,32,369,120,371,347</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
@@ -111,13 +81,14 @@
 			<vnum>5</vnum>
 		</Kid>
 		<Share sr="Share">
+			<b>false</b>
 			<d>&lt;h5&gt;A way to open applications by termux&lt;/h5&gt;
 &lt;h6&gt;by GlitchYou&lt;/h6&gt;</d>
 			<p>false</p>
 			<t>TL - .Main</t>
 		</Share>
 		<Img sr="icon" ve="2">
-			<fle>/storage/emulated/0/Tasker/.icn/icons/Termux.jpg</fle>
+			<fle>/storage/emulated/0/Tasker/.icn/icons/TermuxLaunch.png</fle>
 		</Img>
 		<ProfileVariable sr="pv0">
 			<clearout>false</clearout>
@@ -135,7 +106,7 @@
 	</Project>
 	<Task sr="task120">
 		<cdate>1620808544181</cdate>
-		<edate>1621839811690</edate>
+		<edate>1628918346795</edate>
 		<id>120</id>
 		<nme>TL - File Update</nme>
 		<pri>100</pri>
@@ -149,22 +120,10 @@
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
 			<ConditionList sr="if">
-				<bool0>And</bool0>
-				<bool1>And</bool1>
 				<Condition sr="c0" ve="3">
 					<lhs>%TRUN</lhs>
 					<op>5</op>
 					<rhs>TL - Update Apps</rhs>
-				</Condition>
-				<Condition sr="c1" ve="3">
-					<lhs>%TRUN</lhs>
-					<op>5</op>
-					<rhs>TL - App Installed</rhs>
-				</Condition>
-				<Condition sr="c2" ve="3">
-					<lhs>%TRUN</lhs>
-					<op>5</op>
-					<rhs>TL - App Uninstalled</rhs>
 				</Condition>
 			</ConditionList>
 		</Action>
@@ -202,59 +161,40 @@
 		</Action>
 		<Action sr="act5" ve="7">
 			<code>410</code>
-			<Str sr="arg0" ve="3">Termux/launch-completion.bash</Str>
-			<Str sr="arg1" ve="3">complete -W "%names" launch</Str>
+			<Str sr="arg0" ve="3">Termux/apps</Str>
+			<Str sr="arg1" ve="3">%names</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
 	</Task>
-	<Task sr="task33">
-		<cdate>1620805312365</cdate>
-		<edate>1621823017542</edate>
-		<id>33</id>
-		<nme>TL - App Installed</nme>
-		<pri>6</pri>
+	<Task sr="task32">
+		<cdate>1628867763654</cdate>
+		<edate>1628873776345</edate>
+		<id>32</id>
+		<nme>TL - Stop</nme>
 		<Action sr="act0" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">TL - Get Package</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">%evtprm(2)</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">%pkg</Str>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
+			<code>779</code>
+			<Str sr="arg0" ve="3"/>
+			<Int sr="arg1" val="0"/>
 		</Action>
 		<Action sr="act1" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%name</Str>
-			<Str sr="arg1" ve="3">%evtprm(1)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
+			<code>139</code>
 		</Action>
-		<Action sr="act2" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%apps</Str>
-			<Str sr="arg1" ve="3">&lt;app pkg="%pkg"&gt;%name&lt;/app&gt;
-</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="1"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="0"/>
+	</Task>
+	<Task sr="task33">
+		<cdate>1628868054370</cdate>
+		<edate>1628873782374</edate>
+		<id>33</id>
+		<nme>TL - Install</nme>
+		<Action sr="act0" ve="7">
+			<code>548</code>
+			<Str sr="arg0" ve="3">Copied install command</Str>
+			<Int sr="arg1" val="1"/>
 		</Action>
 	</Task>
 	<Task sr="task347">
 		<cdate>1621801409409</cdate>
-		<edate>1621824539748</edate>
+		<edate>1628873778234</edate>
 		<id>347</id>
 		<nme>TL - Launch App</nme>
 		<pri>6</pri>
@@ -303,7 +243,7 @@
 	</Task>
 	<Task sr="task368">
 		<cdate>1621807968139</cdate>
-		<edate>1621824867827</edate>
+		<edate>1628873785298</edate>
 		<id>368</id>
 		<nme>TL - Info App</nme>
 		<pri>6</pri>
@@ -345,7 +285,7 @@
 	</Task>
 	<Task sr="task369">
 		<cdate>1621808284974</cdate>
-		<edate>1621853506592</edate>
+		<edate>1628873773963</edate>
 		<id>369</id>
 		<nme>TL - Update Apps</nme>
 		<pri>100</pri>
@@ -620,7 +560,7 @@
 	</Task>
 	<Task sr="task371">
 		<cdate>1621816430600</cdate>
-		<edate>1621816467544</edate>
+		<edate>1628873804953</edate>
 		<id>371</id>
 		<nme>TL - Get Package</nme>
 		<Action sr="act0" ve="7">
@@ -728,187 +668,82 @@
 			<Str sr="arg4" ve="3"/>
 		</Action>
 	</Task>
-	<Task sr="task71">
-		<cdate>1620805718230</cdate>
-		<edate>1621820072479</edate>
-		<id>71</id>
-		<nme>TL - App Uninstalled</nme>
-		<pri>6</pri>
-		<Action sr="act0" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">TL - Get Package</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="1"/>
-			<Str sr="arg2" ve="3">%evtprm(2)</Str>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3">%pkg</Str>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-		</Action>
-		<Action sr="act1" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%name</Str>
-			<Str sr="arg1" ve="3">%evtprm(1)</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="1"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>598</code>
-			<Str sr="arg0" ve="3">%apps</Str>
-			<Str sr="arg1" ve="3">&lt;app pkg="%pkg"&gt;%name&lt;/app&gt;</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3"/>
-		</Action>
-	</Task>
 	<Task sr="task83">
 		<cdate>1620806670292</cdate>
-		<edate>1622047519252</edate>
+		<edate>1628873971467</edate>
 		<id>83</id>
 		<nme>TL - .Main</nme>
 		<pri>100</pri>
 		<Action sr="act0" ve="7">
-			<code>377</code>
-			<Bundle sr="arg0">
-				<Vals sr="val">
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES>&lt;StringArray sr=""&gt;&lt;_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;%td_button
-Button
-The label of the button that was clicked&lt;/_array_net.dinglisch.android.tasker.RELEVANT_VARIABLES0&gt;&lt;/StringArray&gt;</net.dinglisch.android.tasker.RELEVANT_VARIABLES>
-					<net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>[Ljava.lang.String;</net.dinglisch.android.tasker.RELEVANT_VARIABLES-type>
-				</Vals>
-			</Bundle>
-			<Str sr="arg1" ve="3">Termux Launch</Str>
-			<Str sr="arg2" ve="3">Click 'OK' to load your installed apps
-
-This application will automatically update your apps when they are installed/uninstalled, but if you have any problems click on 'OK'
-
-To install the launch run 'bash /sdcard/Termux/install.sh'</Str>
-			<Str sr="arg3" ve="3">OK</Str>
-			<Str sr="arg4" ve="3"/>
-			<Str sr="arg5" ve="3">Cancel</Str>
-			<Int sr="arg6">
-				<var>999</var>
-			</Int>
+			<code>523</code>
+			<Str sr="arg0" ve="3">Actions</Str>
+			<Str sr="arg1" ve="3">To install the launch run 'bash /sdcard/Termux/install.sh'</Str>
+			<Str sr="arg10" ve="3"/>
+			<Str sr="arg11" ve="3"/>
+			<Img sr="arg2" ve="2"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
 			<Int sr="arg7" val="0"/>
+			<Int sr="arg8" val="0"/>
+			<Str sr="arg9" ve="3"/>
+			<ListElementItem sr="item0">
+				<label>Termux</label>
+				<Action sr="action" ve="7">
+					<code>20</code>
+					<App sr="arg0">
+						<appClass>com.termux.app.TermuxActivity</appClass>
+						<appPkg>com.termux</appPkg>
+						<label>Termux</label>
+					</App>
+					<Str sr="arg1" ve="3"/>
+					<Int sr="arg2" val="0"/>
+					<Int sr="arg3" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item1">
+				<label>Install</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">TL - Update Apps</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Int sr="arg10" val="1"/>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
+			<ListElementItem sr="item2">
+				<label>Exit</label>
+				<Action sr="action" ve="7">
+					<code>130</code>
+					<Str sr="arg0" ve="3">TL - Stop</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Int sr="arg10" val="1"/>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
+				</Action>
+			</ListElementItem>
 		</Action>
 		<Action sr="act1" ve="7">
-			<code>410</code>
-			<Str sr="arg0" ve="3">Termux/install.sh</Str>
-			<Str sr="arg1" ve="3">#!/data/data/com.termux/files/usr/bin/bash
-location='/sdcard/Termux'
-bin="$PREFIX/bin" # /data/data/com.termux/files/usr/bin
-complete="source $location/launch-completion.bash"
-
-if command -v launch &amp;&gt;/dev/null; then # Check if launch command exists
-  echo "Installed already on '$(which launch)'"
-  exit
-fi
-
-install_source() {
-  if ! grep -qs "$complete" "$1"; then
-    echo -e "\n\n$complete" &gt;&gt; "$1"
-  fi
-}
-
-install "$location"/launch "$bin" # install already can chmod
-
-case "$(basename $SHELL)" in # Get shell
-  'zsh') install_source ~/.zshrc;;
-  'bash') install_source ~/.bashrc;;
-  'fish') install_source ~/.config/fish/config.fish;;
-esac
-
-echo "launch installed on '$(which launch)'"
-</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act2" ve="7">
-			<code>410</code>
-			<Str sr="arg0" ve="3">Termux/launch</Str>
-			<Str sr="arg1" ve="3">#!/data/data/com.termux/files/usr/bin/bash
-lc="/sdcard/Termux/launch-completion.bash"
-
-start_app() {
-  am start --user 0 -a "$1" -e name "$2"
-}
-
-run_action() {
-  if grep -qs "$3" "$lc"; then
-    echo "$1"
-    am broadcast -a "$2" -e name "$3"
-  else
-    usage
-  fi
-}
-
-usage() {
-cat &lt;&lt;EOU
-Usage:
-  launch [ options... ] app_name
-
-  Launch apps on android
-
-  -i --info   show app settings
-  -h --help   show help
-EOU
-  exit
-}
-
-info() {
-  run_action "Starting info $1..." Info "$1"
-}
-
-launch() (
-  run_action "Starting $1..." Launch "$1"
-)
-
-if ! (( $# )); then # If no arguments
-  usage
-fi
-
-case "$1" in
-  -i|--info) info "$2";;
-  -h|--help) usage;;
-  *) launch "$1"; shift;;
-esac
-</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-		</Action>
-		<Action sr="act3" ve="7">
-			<code>130</code>
-			<Str sr="arg0" ve="3">TL - Update Apps</Str>
-			<Int sr="arg1">
-				<var>%priority</var>
-			</Int>
-			<Int sr="arg10" val="0"/>
-			<Str sr="arg2" ve="3"/>
-			<Str sr="arg3" ve="3"/>
-			<Str sr="arg4" ve="3"/>
-			<Int sr="arg5" val="0"/>
-			<Int sr="arg6" val="0"/>
-			<Str sr="arg7" ve="3"/>
-			<Int sr="arg8" val="0"/>
-			<Int sr="arg9" val="0"/>
-			<ConditionList sr="if">
-				<Condition sr="c0" ve="3">
-					<lhs>%td_button</lhs>
-					<op>2</op>
-					<rhs>OK</rhs>
-				</Condition>
-			</ConditionList>
+			<code>512</code>
+			<Int sr="arg0" val="0"/>
 		</Action>
 	</Task>
 </TaskerData>
