@@ -1,6 +1,6 @@
 _launch() {
   _options() {
-    compgen -W "app info update help" -- "${COMP_WORDS[1]}"
+    compgen -W "-a --app -i --info -u --update -h --help" -- "${COMP_WORDS[1]}"
   }
 
   _apps() {
@@ -13,7 +13,7 @@ _launch() {
       COMPREPLY=($(_options))
       ;;
     3)
-      if [[ 'app info' == *"${COMP_WORDS[1]}"* ]]
+      if [[ '-a --app -i --info' == *"${COMP_WORDS[1]}"* ]]
       then
         COMPREPLY=($(_apps))
       fi
