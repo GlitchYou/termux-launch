@@ -69,9 +69,9 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>370,342,34,367</pids>
+		<pids>34,367,342,370</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>120,371,369,347,83,33,32,368</tids>
+		<tids>369,33,347,120,368,32,83,371</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
@@ -726,14 +726,14 @@
 	</Task>
 	<Task sr="task83">
 		<cdate>1620806670292</cdate>
-		<edate>1628922971749</edate>
+		<edate>1628923979775</edate>
 		<id>83</id>
 		<nme>TL - .Main</nme>
 		<pri>100</pri>
 		<Action sr="act0" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Actions</Str>
-			<Str sr="arg1" ve="3">To install the launch click in install and paste command on termux</Str>
+			<Str sr="arg1" ve="3">To install termux-launch click install and paste the command in termux and run, then update the apps and restart termux</Str>
 			<Str sr="arg10" ve="3"/>
 			<Str sr="arg11" ve="3"/>
 			<Img sr="arg2" ve="2"/>

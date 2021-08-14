@@ -33,7 +33,7 @@ install "$project/$me" "$bin" # install already can chmod
 case "$(basename $SHELL)" in # Get shell
   zsh) install_source zsh ~/.zshrc;;
   bash) install_source bash ~/.bashrc;;
-  fish) install_source fish ~/.config/fish/completions/$comp_name.fish;;
+  fish) install_source fish ~/.config/fish/completions/$me.fish;;
 esac
 
 echo "launch installed on '$(which launch)'"
