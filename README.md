@@ -23,17 +23,23 @@ sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your sh
     $ launch --help
     Usage:
       launch [ options... ] app_name
-      Launch apps on android
+        Launch apps on android
       
-           -i --info   show app settings
-           -h --help   show help
+      -a --app       -- open app
+      -i --info      -- show app settings
+      -u --update    -- load all apps
+      -h --help      -- show help
  
-    $ launch playstore
+    $ launch -a playstore
     Starting playstore...
     ...
 
     $ launch -i tasker
     Starting info tasker...
+    ...
+
+    $ launch -u
+    Loadings Apps...
     ...
 
 ##### Import this project
