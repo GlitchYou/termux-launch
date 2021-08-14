@@ -1,7 +1,22 @@
 #!/data/data/com.termux/files/usr/bin/bash
-location='/sdcard/Termux'
-bin="$PREFIX/bin" # /data/data/com.termux/files/usr/bin
-complete="source $location/launch-completion.bash"
+
+location='/sdcard/Android/data/com.termux.launch/'
+
+# /data/data/com.termux/files/usr/bin
+bin="$PREFIX/bin"
+
+bash_completion() {
+	complete="source $location/launch-completion.bash"
+	echo -e "\n\n$complete" >> ~/.bashrc
+}
+
+zsh_completion() {
+
+}
+
+fish_completion() {
+
+}
 
 if command -v launch &>/dev/null; then # Check if launch command exists
   echo "Installed already on '$(which launch)'"
