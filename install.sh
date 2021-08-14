@@ -13,7 +13,7 @@ comp() {
 }
 
 comp_install() {
-  echo "\n\nsource $1" >> "$2"
+  echo -e "\n\nsource $1" >> "$2"
 }
 
 if command -v launch &>/dev/null; then # Check if launch command exists

@@ -69,9 +69,9 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>367,342,370,34</pids>
+		<pids>370,342,34,367</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>368,347,33,369,371,32,83,120</tids>
+		<tids>120,371,369,347,83,33,32,368</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
@@ -169,28 +169,80 @@
 	</Task>
 	<Task sr="task32">
 		<cdate>1628867763654</cdate>
-		<edate>1628873776345</edate>
+		<edate>1628922981468</edate>
 		<id>32</id>
 		<nme>TL - Stop</nme>
 		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
 			<code>779</code>
 			<Str sr="arg0" ve="3"/>
 			<Int sr="arg1" val="0"/>
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act2" ve="7">
 			<code>139</code>
 		</Action>
 	</Task>
 	<Task sr="task33">
 		<cdate>1628868054370</cdate>
-		<edate>1628873782374</edate>
+		<edate>1628923491636</edate>
 		<id>33</id>
 		<nme>TL - Install</nme>
 		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>105</code>
+			<Str sr="arg0" ve="3">git clone --depth=1 %url %project &amp;&amp; bash %project/install.sh</Str>
+			<Int sr="arg1" val="0"/>
+		</Action>
+		<Action sr="act2" ve="7">
 			<code>548</code>
 			<Str sr="arg0" ve="3">Copied install command</Str>
 			<Int sr="arg1" val="1"/>
 		</Action>
+		<Action sr="act3" ve="7">
+			<code>20</code>
+			<App sr="arg0">
+				<appClass>com.termux.app.TermuxActivity</appClass>
+				<appPkg>com.termux</appPkg>
+				<label>Termux</label>
+			</App>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+		<ProfileVariable sr="pv0">
+			<clearout>true</clearout>
+			<exportval></exportval>
+			<immutable>true</immutable>
+			<pvci>false</pvci>
+			<pvd></pvd>
+			<pvdn>URL</pvdn>
+			<pvid>33</pvid>
+			<pvit>t</pvit>
+			<pvn>%url</pvn>
+			<pvt>t</pvt>
+			<pvv>https://github.com/GlitchYou/termux-launch/</pvv>
+			<strout>false</strout>
+		</ProfileVariable>
+		<ProfileVariable sr="pv1">
+			<clearout>true</clearout>
+			<exportval></exportval>
+			<immutable>true</immutable>
+			<pvci>false</pvci>
+			<pvd></pvd>
+			<pvdn></pvdn>
+			<pvid>33</pvid>
+			<pvit>t</pvit>
+			<pvn>%project</pvn>
+			<pvt>t</pvt>
+			<pvv>/sdcard/Termux</pvv>
+			<strout>false</strout>
+		</ProfileVariable>
 	</Task>
 	<Task sr="task347">
 		<cdate>1621801409409</cdate>
@@ -285,32 +337,36 @@
 	</Task>
 	<Task sr="task369">
 		<cdate>1621808284974</cdate>
-		<edate>1628873773963</edate>
+		<edate>1628922945980</edate>
 		<id>369</id>
 		<nme>TL - Update Apps</nme>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
+			<code>512</code>
+			<Int sr="arg0" val="1"/>
+		</Action>
+		<Action sr="act1" ve="7">
 			<code>549</code>
 			<Str sr="arg0" ve="3">%apps</Str>
 			<Int sr="arg1" val="0"/>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act1" ve="7">
+		<Action sr="act10" ve="7">
 			<code>664</code>
-			<Str sr="arg0" ve="3">pm</Str>
-			<Str sr="arg1" ve="3">CONTEXT</Str>
-			<Str sr="arg2" ve="3">getPackageManager
-{PackageManager} ()</Str>
-			<Str sr="arg3" ve="3">PackageManager</Str>
-			<Str sr="arg4" ve="3"/>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">apps</Str>
+			<Str sr="arg2" ve="3">get
+{ResolveInfo} (int)</Str>
+			<Str sr="arg3" ve="3">%num</Str>
+			<Str sr="arg4" ve="3">0</Str>
 			<Str sr="arg5" ve="3"/>
 			<Str sr="arg6" ve="3"/>
 			<Str sr="arg7" ve="3"/>
 			<Str sr="arg8" ve="3"/>
 			<Str sr="arg9" ve="3"/>
 		</Action>
-		<Action sr="act10" ve="7">
+		<Action sr="act11" ve="7">
 			<code>598</code>
 			<label>REPLACE: pkg/cls</label>
 			<Str sr="arg0" ve="3">%pkg</Str>
@@ -322,7 +378,7 @@
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3">$1</Str>
 		</Action>
-		<Action sr="act11" ve="7">
+		<Action sr="act12" ve="7">
 			<code>664</code>
 			<Str sr="arg0" ve="3">%name</Str>
 			<Str sr="arg1" ve="3">app</Str>
@@ -336,7 +392,7 @@
 			<Str sr="arg8" ve="3"/>
 			<Str sr="arg9" ve="3"/>
 		</Action>
-		<Action sr="act12" ve="7">
+		<Action sr="act13" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Loading Apps</Str>
 			<Str sr="arg1" ve="3">%num/%size - %name</Str>
@@ -361,7 +417,7 @@
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act13" ve="7">
+		<Action sr="act14" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Loading Apps</Str>
 			<Str sr="arg1" ve="3">%num/%size - %name</Str>
@@ -386,7 +442,7 @@
 				</Condition>
 			</ConditionList>
 		</Action>
-		<Action sr="act14" ve="7">
+		<Action sr="act15" ve="7">
 			<code>598</code>
 			<label>REPLACE:</label>
 			<Str sr="arg0" ve="3">%name</Str>
@@ -398,7 +454,7 @@
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3">_</Str>
 		</Action>
-		<Action sr="act15" ve="7">
+		<Action sr="act16" ve="7">
 			<code>598</code>
 			<label>REPLACE:</label>
 			<Str sr="arg0" ve="3">%name</Str>
@@ -410,7 +466,7 @@
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3"/>
 		</Action>
-		<Action sr="act16" ve="7">
+		<Action sr="act17" ve="7">
 			<code>598</code>
 			<label>REPLACE: _</label>
 			<Str sr="arg0" ve="3">%name</Str>
@@ -422,14 +478,14 @@
 			<Int sr="arg6" val="1"/>
 			<Str sr="arg7" ve="3">_</Str>
 		</Action>
-		<Action sr="act17" ve="7">
+		<Action sr="act18" ve="7">
 			<code>596</code>
 			<Str sr="arg0" ve="3">%name</Str>
 			<Int sr="arg1" val="28"/>
 			<Str sr="arg2" ve="3"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
-		<Action sr="act18" ve="7">
+		<Action sr="act19" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%apps</Str>
 			<Str sr="arg1" ve="3">&lt;app pkg="%pkg"&gt;%name&lt;/app&gt;
@@ -440,16 +496,13 @@
 			<Int sr="arg5" val="3"/>
 			<Int sr="arg6" val="0"/>
 		</Action>
-		<Action sr="act19" ve="7">
-			<code>40</code>
-		</Action>
 		<Action sr="act2" ve="7">
 			<code>664</code>
-			<Str sr="arg0" ve="3">i</Str>
-			<Str sr="arg1" ve="3">Intent</Str>
-			<Str sr="arg2" ve="3">new
-{Intent} (String)</Str>
-			<Str sr="arg3" ve="3">"android.intent.action.MAIN"</Str>
+			<Str sr="arg0" ve="3">pm</Str>
+			<Str sr="arg1" ve="3">CONTEXT</Str>
+			<Str sr="arg2" ve="3">getPackageManager
+{PackageManager} ()</Str>
+			<Str sr="arg3" ve="3">PackageManager</Str>
 			<Str sr="arg4" ve="3"/>
 			<Str sr="arg5" ve="3"/>
 			<Str sr="arg6" ve="3"/>
@@ -458,6 +511,9 @@
 			<Str sr="arg9" ve="3"/>
 		</Action>
 		<Action sr="act20" ve="7">
+			<code>40</code>
+		</Action>
+		<Action sr="act21" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Loading Apps</Str>
 			<Str sr="arg1" ve="3">%size/%size - %name</Str>
@@ -477,6 +533,20 @@
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>664</code>
+			<Str sr="arg0" ve="3">i</Str>
+			<Str sr="arg1" ve="3">Intent</Str>
+			<Str sr="arg2" ve="3">new
+{Intent} (String)</Str>
+			<Str sr="arg3" ve="3">"android.intent.action.MAIN"</Str>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Str sr="arg9" ve="3"/>
+		</Action>
+		<Action sr="act4" ve="7">
+			<code>664</code>
 			<Str sr="arg0" ve="3"/>
 			<Str sr="arg1" ve="3">i</Str>
 			<Str sr="arg2" ve="3">addCategory
@@ -489,7 +559,7 @@
 			<Str sr="arg8" ve="3"/>
 			<Str sr="arg9" ve="3"/>
 		</Action>
-		<Action sr="act4" ve="7">
+		<Action sr="act5" ve="7">
 			<code>664</code>
 			<Str sr="arg0" ve="3">apps</Str>
 			<Str sr="arg1" ve="3">pm</Str>
@@ -503,7 +573,7 @@
 			<Str sr="arg8" ve="3"/>
 			<Str sr="arg9" ve="3"/>
 		</Action>
-		<Action sr="act5" ve="7">
+		<Action sr="act6" ve="7">
 			<code>664</code>
 			<Str sr="arg0" ve="3">%size</Str>
 			<Str sr="arg1" ve="3">apps</Str>
@@ -517,35 +587,21 @@
 			<Str sr="arg8" ve="3"/>
 			<Str sr="arg9" ve="3"/>
 		</Action>
-		<Action sr="act6" ve="7">
+		<Action sr="act7" ve="7">
 			<code>890</code>
 			<Str sr="arg0" ve="3">%size</Str>
 			<Int sr="arg1" val="1"/>
 			<Int sr="arg2" val="0"/>
 		</Action>
-		<Action sr="act7" ve="7">
+		<Action sr="act8" ve="7">
 			<code>39</code>
 			<Str sr="arg0" ve="3">%num</Str>
 			<Str sr="arg1" ve="3">0:%size</Str>
 			<Int sr="arg2" val="0"/>
 		</Action>
-		<Action sr="act8" ve="7">
-			<code>664</code>
-			<Str sr="arg0" ve="3">app</Str>
-			<Str sr="arg1" ve="3">apps</Str>
-			<Str sr="arg2" ve="3">get
-{ResolveInfo} (int)</Str>
-			<Str sr="arg3" ve="3">%num</Str>
-			<Str sr="arg4" ve="3">0</Str>
-			<Str sr="arg5" ve="3"/>
-			<Str sr="arg6" ve="3"/>
-			<Str sr="arg7" ve="3"/>
-			<Str sr="arg8" ve="3"/>
-			<Str sr="arg9" ve="3"/>
-		</Action>
 		<Action sr="act9" ve="7">
 			<code>664</code>
-			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg0" ve="3">app</Str>
 			<Str sr="arg1" ve="3">apps</Str>
 			<Str sr="arg2" ve="3">get
 {ResolveInfo} (int)</Str>
@@ -670,14 +726,14 @@
 	</Task>
 	<Task sr="task83">
 		<cdate>1620806670292</cdate>
-		<edate>1628873971467</edate>
+		<edate>1628922971749</edate>
 		<id>83</id>
 		<nme>TL - .Main</nme>
 		<pri>100</pri>
 		<Action sr="act0" ve="7">
 			<code>523</code>
 			<Str sr="arg0" ve="3">Actions</Str>
-			<Str sr="arg1" ve="3">To install the launch run 'bash /sdcard/Termux/install.sh'</Str>
+			<Str sr="arg1" ve="3">To install the launch click in install and paste command on termux</Str>
 			<Str sr="arg10" ve="3"/>
 			<Str sr="arg11" ve="3"/>
 			<Img sr="arg2" ve="2"/>
@@ -689,21 +745,26 @@
 			<Int sr="arg8" val="0"/>
 			<Str sr="arg9" ve="3"/>
 			<ListElementItem sr="item0">
-				<label>Termux</label>
+				<label>Install</label>
 				<Action sr="action" ve="7">
-					<code>20</code>
-					<App sr="arg0">
-						<appClass>com.termux.app.TermuxActivity</appClass>
-						<appPkg>com.termux</appPkg>
-						<label>Termux</label>
-					</App>
-					<Str sr="arg1" ve="3"/>
-					<Int sr="arg2" val="0"/>
-					<Int sr="arg3" val="0"/>
+					<code>130</code>
+					<Str sr="arg0" ve="3">TL - Install</Str>
+					<Int sr="arg1">
+						<var>%priority</var>
+					</Int>
+					<Int sr="arg10" val="1"/>
+					<Str sr="arg2" ve="3"/>
+					<Str sr="arg3" ve="3"/>
+					<Str sr="arg4" ve="3"/>
+					<Int sr="arg5" val="0"/>
+					<Int sr="arg6" val="0"/>
+					<Str sr="arg7" ve="3"/>
+					<Int sr="arg8" val="0"/>
+					<Int sr="arg9" val="0"/>
 				</Action>
 			</ListElementItem>
 			<ListElementItem sr="item1">
-				<label>Install</label>
+				<label>Update</label>
 				<Action sr="action" ve="7">
 					<code>130</code>
 					<Str sr="arg0" ve="3">TL - Update Apps</Str>
