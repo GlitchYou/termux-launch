@@ -1,10 +1,11 @@
-<TaskerData sr="" dvi="1" tv="5.13.6">
+<TaskerData sr="" dvi="1" tv="5.14.2-rc">
 	<Profile sr="prof34" ve="2">
 		<cdate>1628873919812</cdate>
 		<clp>true</clp>
-		<edate>1628873940496</edate>
+		<edate>1634769859763</edate>
 		<flags>8</flags>
 		<id>34</id>
+		<limit>true</limit>
 		<mid0>120</mid0>
 		<nme>TL - Running</nme>
 		<State sr="con0" ve="2">
@@ -15,9 +16,10 @@
 	<Profile sr="prof342" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1628857080551</edate>
+		<edate>1634769860801</edate>
 		<flags>8</flags>
 		<id>342</id>
+		<limit>true</limit>
 		<mid0>347</mid0>
 		<nme>TL - .Launch App</nme>
 		<Event sr="con0" ve="2">
@@ -33,9 +35,10 @@
 	<Profile sr="prof367" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1628857079832</edate>
+		<edate>1634769861196</edate>
 		<flags>8</flags>
 		<id>367</id>
+		<limit>true</limit>
 		<mid0>368</mid0>
 		<nme>TL - .Info App</nme>
 		<Event sr="con0" ve="2">
@@ -51,9 +54,10 @@
 	<Profile sr="prof370" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1628867424866</edate>
+		<edate>1634769860316</edate>
 		<flags>8</flags>
 		<id>370</id>
+		<limit>true</limit>
 		<mid0>369</mid0>
 		<nme>TL - .Update App</nme>
 		<Event sr="con0" ve="2">
@@ -69,16 +73,16 @@
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>34,367,342,370</pids>
+		<pids>367,370,34,342</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>369,33,347,120,368,32,83,371</tids>
+		<tids>32,369,368,371,347,120,33,83</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
 			<pkg>com.termux.launch</pkg>
 			<vTarg>21</vTarg>
-			<vnme>1.1</vnme>
-			<vnum>5</vnum>
+			<vnme>1.2.1</vnme>
+			<vnum>7</vnum>
 		</Kid>
 		<Share sr="Share">
 			<b>false</b>
@@ -187,7 +191,7 @@
 	</Task>
 	<Task sr="task33">
 		<cdate>1628868054370</cdate>
-		<edate>1628923491636</edate>
+		<edate>1634768676486</edate>
 		<id>33</id>
 		<nme>TL - Install</nme>
 		<Action sr="act0" ve="7">
@@ -196,7 +200,9 @@
 		</Action>
 		<Action sr="act1" ve="7">
 			<code>105</code>
-			<Str sr="arg0" ve="3">git clone --depth=1 %url %project &amp;&amp; bash %project/install.sh</Str>
+			<Str sr="arg0" ve="3">rm -rf %project &amp;&amp;\
+git clone --depth=1 %url %project &amp;&amp;\
+bash %project/install.sh</Str>
 			<Int sr="arg1" val="0"/>
 		</Action>
 		<Action sr="act2" ve="7">
@@ -246,7 +252,7 @@
 	</Task>
 	<Task sr="task347">
 		<cdate>1621801409409</cdate>
-		<edate>1628873778234</edate>
+		<edate>1629058053458</edate>
 		<id>347</id>
 		<nme>TL - Launch App</nme>
 		<pri>6</pri>
@@ -295,7 +301,7 @@
 	</Task>
 	<Task sr="task368">
 		<cdate>1621807968139</cdate>
-		<edate>1628920946043</edate>
+		<edate>1632399356815</edate>
 		<id>368</id>
 		<nme>TL - Info App</nme>
 		<pri>6</pri>
@@ -337,7 +343,7 @@
 	</Task>
 	<Task sr="task369">
 		<cdate>1621808284974</cdate>
-		<edate>1628922945980</edate>
+		<edate>1632759290957</edate>
 		<id>369</id>
 		<nme>TL - Update Apps</nme>
 		<pri>6</pri>
@@ -616,7 +622,7 @@
 	</Task>
 	<Task sr="task371">
 		<cdate>1621816430600</cdate>
-		<edate>1628873804953</edate>
+		<edate>1632399280717</edate>
 		<id>371</id>
 		<nme>TL - Get Package</nme>
 		<Action sr="act0" ve="7">
@@ -726,7 +732,7 @@
 	</Task>
 	<Task sr="task83">
 		<cdate>1620806670292</cdate>
-		<edate>1628923979775</edate>
+		<edate>1634769758007</edate>
 		<id>83</id>
 		<nme>TL - .Main</nme>
 		<pri>100</pri>
