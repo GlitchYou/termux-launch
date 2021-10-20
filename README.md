@@ -37,8 +37,8 @@ sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your sh
       -u --update    -- load all apps
       -h --help      -- show help
  
-    $ launch -a playstore
-    Starting playstore...
+    $ launch -a play_store
+    Starting play_store...
     ...
 
     $ launch -i tasker
