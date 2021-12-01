@@ -20,7 +20,7 @@ Launch apps on Termux
 ### Uninstall
 
 ```bash
-rm -f $(which launch)
+rm -f $(command -v launch)
 sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your shell's config file
 ```
 
