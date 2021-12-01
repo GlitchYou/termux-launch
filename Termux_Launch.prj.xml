@@ -1,11 +1,10 @@
-<TaskerData sr="" dvi="1" tv="5.14.2-rc">
+<TaskerData sr="" dvi="1" tv="5.15.4-beta">
 	<Profile sr="prof34" ve="2">
 		<cdate>1628873919812</cdate>
 		<clp>true</clp>
-		<edate>1634769859763</edate>
+		<edate>1638379407399</edate>
 		<flags>8</flags>
 		<id>34</id>
-		<limit>true</limit>
 		<mid0>120</mid0>
 		<nme>TL - Running</nme>
 		<State sr="con0" ve="2">
@@ -16,10 +15,9 @@
 	<Profile sr="prof342" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1634769860801</edate>
+		<edate>1638379430917</edate>
 		<flags>8</flags>
 		<id>342</id>
-		<limit>true</limit>
 		<mid0>347</mid0>
 		<nme>TL - .Launch App</nme>
 		<Event sr="con0" ve="2">
@@ -35,10 +33,9 @@
 	<Profile sr="prof367" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1634769861196</edate>
+		<edate>1638379409590</edate>
 		<flags>8</flags>
 		<id>367</id>
-		<limit>true</limit>
 		<mid0>368</mid0>
 		<nme>TL - .Info App</nme>
 		<Event sr="con0" ve="2">
@@ -54,10 +51,9 @@
 	<Profile sr="prof370" ve="2">
 		<cdate>1621801377748</cdate>
 		<clp>true</clp>
-		<edate>1634769860316</edate>
+		<edate>1638379407993</edate>
 		<flags>8</flags>
 		<id>370</id>
-		<limit>true</limit>
 		<mid0>369</mid0>
 		<nme>TL - .Update App</nme>
 		<Event sr="con0" ve="2">
@@ -70,12 +66,29 @@
 			<Str sr="arg4" ve="3"/>
 		</Event>
 	</Profile>
+	<Profile sr="prof45" ve="2">
+		<cdate>1621801377748</cdate>
+		<edate>1638382731952</edate>
+		<flags>8</flags>
+		<id>45</id>
+		<mid0>47</mid0>
+		<nme>TL - .Launch Package</nme>
+		<Event sr="con0" ve="2">
+			<code>599</code>
+			<pri>0</pri>
+			<Str sr="arg0" ve="3">Package</Str>
+			<Int sr="arg1" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+		</Event>
+	</Profile>
 	<Project sr="proj0" ve="2">
 		<cdate>1620767398746</cdate>
 		<name>Termux:Launch</name>
-		<pids>367,370,34,342</pids>
+		<pids>34,370,367,45,342</pids>
 		<psort>ActiveAlpha</psort>
-		<tids>32,369,368,371,347,120,33,83</tids>
+		<tids>33,47,32,371,347,369,120,368,83</tids>
 		<tsort>Alpha</tsort>
 		<Kid sr="Kid">
 			<launchID>83</launchID>
@@ -87,8 +100,14 @@
 		<Share sr="Share">
 			<b>false</b>
 			<d>&lt;h5&gt;A way to open applications by termux&lt;/h5&gt;
+
+&lt;a href="https://github.com/GlitchYou/termux-launch"&gt;
+GitHub
+&lt;/a&gt;
+
 &lt;h6&gt;by GlitchYou&lt;/h6&gt;</d>
-			<p>false</p>
+			<g>Apps,Utility</g>
+			<p>true</p>
 			<t>TL - .Main</t>
 		</Share>
 		<Img sr="icon" ve="2">
@@ -110,7 +129,7 @@
 	</Project>
 	<Task sr="task120">
 		<cdate>1620808544181</cdate>
-		<edate>1628918346795</edate>
+		<edate>1638380994004</edate>
 		<id>120</id>
 		<nme>TL - File Update</nme>
 		<pri>100</pri>
@@ -143,37 +162,17 @@
 			<Int sr="arg1" val="5"/>
 		</Action>
 		<Action sr="act3" ve="7">
-			<code>547</code>
-			<Str sr="arg0" ve="3">%names</Str>
-			<Str sr="arg1" ve="3">%names()</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Int sr="arg5" val="3"/>
-			<Int sr="arg6" val="0"/>
-		</Action>
-		<Action sr="act4" ve="7">
-			<code>598</code>
-			<Str sr="arg0" ve="3">%names</Str>
-			<Str sr="arg1" ve="3">,</Str>
-			<Int sr="arg2" val="0"/>
-			<Int sr="arg3" val="0"/>
-			<Int sr="arg4" val="0"/>
-			<Str sr="arg5" ve="3"/>
-			<Int sr="arg6" val="1"/>
-			<Str sr="arg7" ve="3"> </Str>
-		</Action>
-		<Action sr="act5" ve="7">
 			<code>410</code>
 			<Str sr="arg0" ve="3">Termux/apps</Str>
-			<Str sr="arg1" ve="3">%names</Str>
+			<Str sr="arg1" ve="3">%names(+
+)</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 		</Action>
 	</Task>
 	<Task sr="task32">
 		<cdate>1628867763654</cdate>
-		<edate>1628922981468</edate>
+		<edate>1638380967493</edate>
 		<id>32</id>
 		<nme>TL - Stop</nme>
 		<Action sr="act0" ve="7">
@@ -191,7 +190,7 @@
 	</Task>
 	<Task sr="task33">
 		<cdate>1628868054370</cdate>
-		<edate>1634768676486</edate>
+		<edate>1638381401001</edate>
 		<id>33</id>
 		<nme>TL - Install</nme>
 		<Action sr="act0" ve="7">
@@ -209,6 +208,17 @@ bash %project/install.sh</Str>
 			<code>548</code>
 			<Str sr="arg0" ve="3">Copied install command</Str>
 			<Int sr="arg1" val="1"/>
+			<Str sr="arg10" ve="3"/>
+			<Int sr="arg11" val="1"/>
+			<Int sr="arg12" val="0"/>
+			<Int sr="arg2" val="0"/>
+			<Str sr="arg3" ve="3"/>
+			<Str sr="arg4" ve="3"/>
+			<Str sr="arg5" ve="3"/>
+			<Str sr="arg6" ve="3"/>
+			<Str sr="arg7" ve="3"/>
+			<Str sr="arg8" ve="3"/>
+			<Int sr="arg9" val="1"/>
 		</Action>
 		<Action sr="act3" ve="7">
 			<code>20</code>
@@ -252,14 +262,14 @@ bash %project/install.sh</Str>
 	</Task>
 	<Task sr="task347">
 		<cdate>1621801409409</cdate>
-		<edate>1629058053458</edate>
+		<edate>1638382797381</edate>
 		<id>347</id>
 		<nme>TL - Launch App</nme>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%num</Str>
-			<Str sr="arg1" ve="3">%apps.app(#?~R%name)</Str>
+			<Str sr="arg1" ve="3">%apps.app(#?~R^%name$)</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -268,7 +278,7 @@ bash %project/install.sh</Str>
 		</Action>
 		<Action sr="act1" ve="7">
 			<code>547</code>
-			<Str sr="arg0" ve="3">%app</Str>
+			<Str sr="arg0" ve="3">%pkg</Str>
 			<Str sr="arg1" ve="3">%apps[app=:=pkg](%num)</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
@@ -278,8 +288,8 @@ bash %project/install.sh</Str>
 		</Action>
 		<Action sr="act2" ve="7">
 			<code>598</code>
-			<Str sr="arg0" ve="3">%app</Str>
-			<Str sr="arg1" ve="3">/.+</Str>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">/.+$</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -291,8 +301,8 @@ bash %project/install.sh</Str>
 			<code>20</code>
 			<App sr="arg0">
 				<appClass></appClass>
-				<appPkg>%app</appPkg>
-				<label>%app</label>
+				<appPkg>%pkg</appPkg>
+				<label>%pkg</label>
 			</App>
 			<Str sr="arg1" ve="3"/>
 			<Int sr="arg2" val="0"/>
@@ -301,14 +311,14 @@ bash %project/install.sh</Str>
 	</Task>
 	<Task sr="task368">
 		<cdate>1621807968139</cdate>
-		<edate>1632399356815</edate>
+		<edate>1638382738005</edate>
 		<id>368</id>
 		<nme>TL - Info App</nme>
 		<pri>6</pri>
 		<Action sr="act0" ve="7">
 			<code>547</code>
 			<Str sr="arg0" ve="3">%num</Str>
-			<Str sr="arg1" ve="3">%apps.app(#?~R%name)</Str>
+			<Str sr="arg1" ve="3">%apps.app(#?~R^%name$)</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -328,7 +338,7 @@ bash %project/install.sh</Str>
 		<Action sr="act2" ve="7">
 			<code>598</code>
 			<Str sr="arg0" ve="3">%pkg</Str>
-			<Str sr="arg1" ve="3">/.+</Str>
+			<Str sr="arg1" ve="3">/.+$</Str>
 			<Int sr="arg2" val="0"/>
 			<Int sr="arg3" val="0"/>
 			<Int sr="arg4" val="0"/>
@@ -343,7 +353,7 @@ bash %project/install.sh</Str>
 	</Task>
 	<Task sr="task369">
 		<cdate>1621808284974</cdate>
-		<edate>1632759290957</edate>
+		<edate>1638381231105</edate>
 		<id>369</id>
 		<nme>TL - Update Apps</nme>
 		<pri>6</pri>
@@ -622,7 +632,7 @@ bash %project/install.sh</Str>
 	</Task>
 	<Task sr="task371">
 		<cdate>1621816430600</cdate>
-		<edate>1632399280717</edate>
+		<edate>1638381308825</edate>
 		<id>371</id>
 		<nme>TL - Get Package</nme>
 		<Action sr="act0" ve="7">
@@ -730,9 +740,48 @@ bash %project/install.sh</Str>
 			<Str sr="arg4" ve="3"/>
 		</Action>
 	</Task>
+	<Task sr="task47">
+		<cdate>1621801409409</cdate>
+		<edate>1638382889567</edate>
+		<id>47</id>
+		<nme>TL - Launch Package</nme>
+		<pri>6</pri>
+		<Action sr="act0" ve="7">
+			<code>547</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">%apps[app=:=pkg]($?~R^%name)</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Int sr="arg5" val="3"/>
+			<Int sr="arg6" val="0"/>
+		</Action>
+		<Action sr="act1" ve="7">
+			<code>598</code>
+			<Str sr="arg0" ve="3">%pkg</Str>
+			<Str sr="arg1" ve="3">/.+$</Str>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+			<Int sr="arg4" val="0"/>
+			<Str sr="arg5" ve="3"/>
+			<Int sr="arg6" val="1"/>
+			<Str sr="arg7" ve="3"/>
+		</Action>
+		<Action sr="act2" ve="7">
+			<code>20</code>
+			<App sr="arg0">
+				<appClass></appClass>
+				<appPkg>%pkg</appPkg>
+				<label>%pkg</label>
+			</App>
+			<Str sr="arg1" ve="3"/>
+			<Int sr="arg2" val="0"/>
+			<Int sr="arg3" val="0"/>
+		</Action>
+	</Task>
 	<Task sr="task83">
 		<cdate>1620806670292</cdate>
-		<edate>1634769758007</edate>
+		<edate>1638380990741</edate>
 		<id>83</id>
 		<nme>TL - .Main</nme>
 		<pri>100</pri>

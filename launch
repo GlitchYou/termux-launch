@@ -1,6 +1,5 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
-
 ### Helpers
 
 project="/sdcard/Termux"
@@ -12,7 +11,7 @@ start_app() {
 }
 
 run_action() {
-  if grep -qs "$3" "$apps" || [ "$2" = Update ]
+  if grep -qs "$3" "$apps" || [ "$2" = Update ] || [ "$2" = Package ]
   then
     echo "$1"
     am broadcast -a "$2" -e name "$3"
@@ -36,19 +35,28 @@ update() {
   run_action "Loading Apps..." Update
 }
 
+package() {
+  run_action "Starting package $1..." Package "$1"
+}
+
 usage() {
-cat <<EOU
+cat <<EOF
 
  Usage:
-   launch [ -a --app <app_name> ] [ -i --info <app_name> ] [ -u -update ] [ -h --help ]
-     Launch apps on android
+  launch
+      [ -a --app <app_name> ]        [ -u --update ]
+      [ -i --info <app_name> ]       [ -u --help ]
+      [ -p --package <app_package> ]
+
+  Launch apps on android
 
    -a --app      -- open app
    -i --info     -- open app settings
+   -p --package  -- open app from package
    -u --update   -- load all apps
    -h --help     -- show help
 
-EOU
+EOF
   exit
 }
 
@@ -63,6 +71,7 @@ case "$1" in
   -a|--app) app "$2";;
   -i|--info) info "$2";;
   -u|--update) update;;
+  -p|--package) package "$2";;
   -h|--help) usage;;
   *) usage; shift;;
 esac

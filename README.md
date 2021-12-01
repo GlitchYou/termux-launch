@@ -16,7 +16,6 @@ Launch apps on Termux
 2. Open the app and it will show a notification
 3. Click install to proceed with the installation
 
-
 ### Uninstall
 
 ```bash
@@ -24,19 +23,21 @@ rm -f $(command -v launch)
 sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your shell's config file
 ```
 
-
 ### How to use
 
     $ launch --help
     Usage:
-      launch [ -a --app <app_name> ] [ -i --info <app_name> ] [ -u -update ] [ -h --help ]
+      launch [ -a --app <app_name> ]  [ -u --update ]
+             [ -i --info <app_name> ] [ -h --help ]
+             [ -p --package <app_package> ]
         Launch apps on android
       
       -a --app       -- open app
       -i --info      -- show app settings
+      -p --package   -- open app from package
       -u --update    -- load all apps
       -h --help      -- show help
- 
+
     $ launch -a play_store
     Starting play_store...
     ...
@@ -45,12 +46,15 @@ sed -i 's|.*launch-completion.bash||' ~/.bashrc # Replace ~/.bashrc with your sh
     Starting info tasker...
     ...
 
+    $ launch -p com.whatsapp
+    Starting package com.whatsapp...
+    ...
+
     $ launch -u
     Loading Apps...
     ...
 
-
-##### Import this project
+#### Import this project
 
 > I did this project with the help of [Tasker](https://play.google.com/store/apps/details?id=net.dinglisch.android.taskerm)
 
