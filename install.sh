@@ -36,5 +36,5 @@ case "$(basename $SHELL)" in # Get shell
   fish) install_source fish ~/.config/fish/completions/$me.fish;;
 esac
 
-echo "launch installed on '$(which launch)'"
+echo "launch installed on '$(command -v launch)'"
 
